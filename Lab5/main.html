@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("p").dblclick(function() {
+                
+                //highlight the new selected word
+                var range = window.getSelection();
+                var word = $.trim(range.toString());
+
+                //remove prev highlight
+                $("p").html ( $("p").html().replace(/<mark>/g, ``) );
+                $("p").html ( $("p").html().replace(/<\/mark>/g, ``) );
+
+                //highlight current double clicked word
+                if(word != '') {
+                    var re = new RegExp(word, 'g');
+                    $("p").html ( $("p").html().replace(re, `<mark>$&</mark>`) );
+                }
+
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+
+<p>This is a text. My text. What do you think about my text? This was my text. Text text.</p>
+<p>This is a text. My text. What do you think about my text? This was my text. Text text.</p>
+<p>This is a text. My text. What do you think about my text? This was my text. Text text.</p>
+
+
+
+
+</body>
+</html>

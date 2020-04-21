@@ -1,0 +1,32 @@
+.my_div{
+    position: absolute;
+    left: 200px;
+    right: 200px;
+    top:5px;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+.my_ul{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-right: 35px;
+    background-color: black;
+}
+
+.my_li{
+    width:150px;
+    /*height:80px;
+    overflow:hidden;*/
+}
+
+
+#place_big_img{
+    height: 500px;
+    /*background-size: 100% 100%;*/
+    background-repeat: no-repeat;
+}
